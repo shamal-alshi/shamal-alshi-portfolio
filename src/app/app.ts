@@ -38,7 +38,20 @@ export class Reveal {
     <p class="type">Senior Frontend Engineer · <span>Angular Specialist</span></p>
     <p class="lead">With 5+ years of Angular behind me, I help enterprises move from legacy codebases to modern Angular, making their apps faster, more secure and easier for teams to maintain.</p>
     <div class="cta"><a class="btn" href="Shamal_Alshi_Resume.pdf" download>Download Resume</a><a class="btn ghost" href="#contact">Let's talk →</a></div>
-    <div class="social"><a href="https://github.com/shamal-alshi" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/shamal-alshi" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:shamal.alshi@gmail.com">Email</a></div>
+    <div class="social">
+      <a href="https://github.com/shamal-alshi" target="_blank" rel="noopener">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.59 1.2 3.22.92.1-.72.39-1.2.7-1.48-2.47-.28-5.06-1.24-5.06-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.59 5.21-5.07 5.49.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/shamal-alshi" target="_blank" rel="noopener">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.74H4.96V9.18h2.97v9.56ZM6.45 7.87a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.29 10.87h-2.97v-4.65c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.46V9.18h2.85v1.31h.04c.4-.75 1.37-1.55 2.82-1.55 3.01 0 3.57 1.98 3.57 4.55v5.25Z"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:shamal.alshi@gmail.com">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.75 4.5h16.5A2.25 2.25 0 0 1 22.5 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H3.75a2.25 2.25 0 0 1-2.25-2.25V6.75A2.25 2.25 0 0 1 3.75 4.5Zm-.75 3v9.75c0 .41.34.75.75.75h16.5c.41 0 .75-.34.75-.75V7.5l-8.54 5.69a.83.83 0 0 1-.92 0L3 7.5Zm1.12-1.5L12 11.66 19.88 6H4.12Z"/></svg>
+        Email
+      </a>
+    </div>
   </div>
   <div class="hero-art"><div class="ring"></div>
     <div class="avatar">

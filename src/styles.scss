@@ -276,11 +276,24 @@ h1 {
 
 .social {
     display: flex;
+    align-items: center;
     gap: 20px;
     margin-top: 26px;
     font-family: 'JetBrains Mono', monospace;
     font-size: .85rem;
     color: var(--mut)
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto
 }
 
 .social a:hover {
