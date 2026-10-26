@@ -28,7 +28,7 @@ export class Reveal {
   <nav>@for (l of links; track l) {<a [href]="'#'+l.toLowerCase()">{{l}}</a>}</nav>
   <div class="actions">
     <button class="icon" (click)="toggle()" [attr.aria-label]="'Switch to ' + (theme()==='dark'?'light':'dark') + ' theme'">{{ theme()==='dark' ? '☀' : '☾' }}</button>
-    <a class="btn sm" href="Shamal_Alshi_Resume.pdf" download>Resume ↓</a></div></header>
+    <!-- <a class="btn sm" href="Shamal_Alshi_Resume.pdf" download>Resume ↓</a> --></div></header>
 
 <main id="top">
 <section class="hero">
@@ -36,7 +36,7 @@ export class Reveal {
     <span class="pill"><b class="dot"></b> Open to Senior Angular Developer roles</span>
     <h1>Shamal <span class="grad">Alshi</span></h1>
     <p class="type">Senior Frontend Engineer · <span>Angular Specialist</span></p>
-    <p class="lead">I modernize and scale mission-critical Angular platforms for regulated enterprises, shipping <b>zero-downtime migrations</b>, <b>sub-2s dashboards</b> and <b>RBAC architectures</b> trusted by banks and energy giants.</p>
+    <p class="lead">With 5+ years of Angular behind me, I help enterprises move from legacy codebases to modern Angular, making their apps faster, more secure and easier for teams to maintain.</p>
     <div class="cta"><a class="btn" href="Shamal_Alshi_Resume.pdf" download>Download Resume</a><a class="btn ghost" href="#contact">Let's talk →</a></div>
     <div class="social"><a href="https://github.com/shamal-alshi" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/shamal-alshi" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:shamal.alshi@gmail.com">Email</a></div>
   </div>
@@ -44,8 +44,8 @@ export class Reveal {
     <div class="avatar">
       <img [src]="photo()" (error)="photo.set('')" alt="Shamal Alshi" width="320" height="320">
       @if (!photo()) {<span>SA</span>}</div>
-    <div class="chip c1">Angular 20</div><div class="chip c2">Signals</div><div class="chip c3">RxJS · NgRx</div>
-    <div class="chip c4">Wipro · Citi · Hitachi Energy</div></div>
+    <div class="chip c1">Angular</div><div class="chip c2">Ex Wiproite</div><div class="chip c3">RxJS · Signals</div>
+    <div class="chip c4">JS · TS</div></div>
 </section>
 
 <section class="stats" reveal>@for (s of stats; track s.l) {<div class="glass"><strong><span [attr.data-n]="s.v">0</span>{{s.s}}</strong><small>{{s.l}}</small></div>}</section>
@@ -71,19 +71,23 @@ export class Reveal {
 
 <section id="projects"><h2 reveal><small>03</small> Open-source <em>projects</em></h2><p class="sub" reveal>Built on my own time to go deeper than client work allows. Each one is deployed and public.</p>
   @for (p of projects; track p.n) {<article class="glass proj" reveal>
-    <div class="viz {{p.viz}}"><div class="vz">@switch (p.viz) {@case ('rx') {<b></b><b></b><b></b>}@case ('rs') {<b>Day</b><b>Sepia</b><b>Night</b>}@default {<code>{{ '{' }} "name": "…" {{ '}' }}</code><u>name</u><u>role ▾</u>}}</div></div>
+    <div class="viz {{p.viz}}"><div class="vz">@switch (p.viz) {@case ('rx') {<b></b><b></b><b></b>}@case ('rs') {
+      <b><img src="https://covers.openlibrary.org/b/isbn/9780743273565-M.jpg" alt="The Great Gatsby book cover"></b>
+      <b><img src="https://covers.openlibrary.org/b/isbn/9780061120084-M.jpg" alt="To Kill a Mockingbird book cover"></b>
+      <b><img src="https://covers.openlibrary.org/b/isbn/9780140328721-M.jpg" alt="Matilda book cover"></b>
+    }@default {<code>{{ '{' }} "name": "…" {{ '}' }}</code><u>name</u><u>role ▾</u>}}</div></div>
     <div class="pbody"><span class="k">{{p.type}}</span><h3>{{p.n}}</h3><p class="pd">{{p.d}}</p>
       <ul>@for (x of p.f; track x) {<li>{{x}}</li>}</ul><p class="eng"><b>Engineering:</b> {{p.e}}</p>
       <div class="tags">@for (t of p.tags; track t) {<span>{{t}}</span>}</div>
       <div class="cta">@if (p.live) {<a class="btn sm" [href]="p.live" target="_blank" rel="noopener">Live demo ↗</a>}<a class="btn sm ghost" [href]="p.repo" target="_blank" rel="noopener">Source on GitHub ↗</a></div></div></article>}</section>
 
-<section id="craft"><h2 reveal><small>04</small> UI <em>craft</em></h2>
+<section id="skills"><h2 reveal><small>04</small> Skills</h2>
+  <div class="skills">@for (g of groups; track g) {<div class="glass" reveal><h4>{{g}}</h4><div class="tags">@for (s of skills[g]; track s) {<span>{{s}}</span>}</div></div>}</div></section>
+
+<section id="craft"><h2 reveal><small>05</small> UI <em>craft</em></h2>
   <div class="grid4">@for (c of craft; track c.t) {<div class="glass card" reveal><span class="ic">{{c.i}}</span><h3>{{c.t}}</h3><p>{{c.d}}</p></div>}</div>
   <div class="glass play" reveal><div><h4>Try it: live theme tokens</h4><p>This whole site runs on CSS custom properties. Pick an accent and watch every gradient, glow and border re-theme instantly.</p></div>
     <div class="sw">@for (c of accents; track c) {<button [style.background]="c" (click)="accent(c)" [attr.aria-label]="'Accent ' + c"></button>}</div></div></section>
-
-<section id="skills"><h2 reveal><small>05</small> Skills</h2>
-  <div class="skills">@for (g of groups; track g) {<div class="glass" reveal><h4>{{g}}</h4><div class="tags">@for (s of skills[g]; track s) {<span>{{s}}</span>}</div></div>}</div></section>
 
 <section id="about"><h2 reveal><small>06</small> About</h2>
   <div class="glass about" reveal><p>Systems thinker who designs scalable API layers, RBAC architectures and component standards adopted across product teams, and mentors engineers through structured technical guidance. Eliminated 60+ critical security vulnerabilities in regulated, compliance-heavy environments.</p><div class="tags pr">@for (p of principles; track p) {<span>{{p}}</span>}</div>
@@ -96,16 +100,16 @@ export class Reveal {
 <footer>© {{year}} Shamal Alshi · Bengaluru, India · Built with Angular</footer>`
 })
 export class App implements OnInit {
-  migs = MIGS; craft = CRAFT; principles = PRINCIPLES; vers = Array.from({length:13},(_,i)=>i+8); accents = ['#6366f1','#0ea5e9','#10b981','#f59e0b','#ec4899','#ef4444'];
+  migs = MIGS; craft = CRAFT; principles = PRINCIPLES; vers = Array.from({ length: 13 }, (_, i) => i + 8); accents = ['#6366f1', '#0ea5e9', '#10b981', '#f59e0b', '#ec4899', '#ef4444'];
   stats = STATS; roles = ROLES; cases = CASES; skills = SKILLS; projects = PROJECTS;
-  groups = Object.keys(SKILLS); links = ['Experience', 'Impact', 'Projects', 'Craft', 'Skills', 'Contact'];
+  groups = Object.keys(SKILLS); links = ['Experience', 'Impact', 'Projects', 'Skills', 'Craft', 'Contact'];
   tab = signal(0); theme = signal('dark'); year = new Date().getFullYear();
   // Replace by placing public/profile.jpg and using 'profile.jpg'
   photo = signal('https://avatars.githubusercontent.com/u/285251126?v=4');
   ngOnInit() { this.theme.set(document.documentElement.dataset['theme'] ?? 'dark'); }
   toggle() {
     const t = this.theme() === 'dark' ? 'light' : 'dark'; this.theme.set(t);
-    document.documentElement.dataset['theme'] = t; try { localStorage.setItem('theme', t); } catch {}
+    document.documentElement.dataset['theme'] = t; try { localStorage.setItem('theme', t); } catch { }
   }
   accent(c: string) { document.documentElement.style.setProperty('--a', c); }
   @HostListener('window:mousemove', ['$event']) move(e: MouseEvent) {

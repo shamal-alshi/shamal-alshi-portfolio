@@ -6,8 +6,8 @@ export const CASES = [
   { k: '02 · Performance', t: 'Dashboard 20s → 2s', p: 'A core dashboard for 150+ users across 8+ countries loaded in ~20 seconds.', a: 'Route-level lazy loading, OnPush change detection, bundle analysis.', r: '90% faster initial load' },
   { k: '03 · Architecture', t: 'Enterprise RBAC and API layer', p: 'Multi-role, multi-tenant access and 100+ API integrations with inconsistent handling.', a: 'Route guards plus directive-level toggles; centralized HttpClient and interceptor layers.', r: '~35% faster integration · adopted platform-wide' }];
 export const SKILLS: Record<string, string[]> = {
-  'Angular': ['Angular 8–20', 'Signals', 'Standalone', 'RxJS', 'NgRx', 'Reactive Forms', 'Material & CDK', 'Directives & Pipes', 'DI'],
-  'Language & UI': ['TypeScript', 'JavaScript ES6+', 'HTML5', 'CSS3', 'SCSS', 'Tailwind', 'Figma-to-Code'],
+  'Angular': ['Angular 22', 'Signals', 'Standalone', 'RxJS', 'NgRx', 'Reactive Forms', 'Material & CDK', 'Directives & Pipes', 'DI'],
+  'Language & UI': ['TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Tailwind', 'Figma-to-Code'],
   'Architecture': ['RBAC', 'Route Guards', 'HTTP Interceptors', 'JWT Auth', 'REST & Microservices', 'Microfrontends', 'Component Libraries'],
   'Performance & Quality': ['OnPush', 'Lazy Loading', 'Core Web Vitals', 'Code Splitting', 'Jasmine/Karma/Jest', 'SonarQube', 'Azure DevOps CI/CD'],
   'AI-Assisted Eng.': ['GitHub Copilot', 'Claude', 'ChatGPT', 'Code Review', 'Test Writing', 'Migration Tooling']};
@@ -21,7 +21,7 @@ export const ROLES = [
    {t:'JWT with refresh and expiry handling',w:'Operators on long shifts stopped being logged out, while sessions still expire safely.'},
    {t:'AI as a team multiplier, with review guardrails',w:'Copilot, Claude and ChatGPT across codegen, tests and docs made reviews 40% faster and cut bugs by 50%+.'}],
   out:['99.9%+ SLA held','15+ breaking changes cleared','~8 hrs saved per module','Reviews 40% faster']},
- { co:'Hitachi Energy', sys:'Relcare Platform', role:'Senior Frontend Engineer', when:'Jan 2022 – Feb 2025', tags:['Angular 18','RxJS','RBAC','Reactive Forms','rrule','SonarQube'],
+ { co:'Hitachi Energy', sys:'Relcare', role:'Senior Frontend Engineer', when:'Jan 2022 – Feb 2025', tags:['Angular 18','RxJS','RBAC','Reactive Forms','rrule','SonarQube'],
   ctx:'An internal platform used daily by 150+ people across 8+ countries, with a slow core dashboard, 70+ deprecated dependencies and a different set of screens for every role.',
   dec:[{t:'Treat the v12 → v18 migration as a plan, then document it',w:'35 production modules moved in 4 weeks with zero regressions, and the written strategy became the team playbook.'},
    {t:'Fix load time at the route, not the component',w:'Lazy loading plus OnPush took the dashboard from ~20s to ~2s.'},
@@ -48,7 +48,7 @@ export const PROJECTS = [
   d:'RxJS is hard to picture from definitions alone. Each lesson starts from a familiar problem, explains the idea in plain language, then lets you run an experiment while animated marble lanes show values moving through the stream.',
   f:['Subjects: Subject, BehaviorSubject, ReplaySubject and AsyncSubject, including what late subscribers receive','Cold vs hot streams with share() and shareReplay() on a simulated request','switchMap, mergeMap, concatMap and exhaustMap side by side on overlapping work','catchError placement, retry of a flaky request, loading/success/error states','Subscription lifetimes, event-rate operators and shareReplay ref-counting'],
   e:'Lazy-loaded lesson routes, a reusable marble-lane visualization, and prerendered routes.', tags:['Angular','Signals','RxJS 7','Router','SCSS'] },
- { n:'ReadSphere', type:'Product-style web app', viz:'rs', repo:'https://github.com/shamal-alshi/readsphere',
+ { n:'ReadSphere', type:'Product-style web app', viz:'rs', live:'https://readsphere-rho.vercel.app/', repo:'https://github.com/shamal-alshi/readsphere',
   d:'A free digital library and reader powered by Open Library and Internet Archive, with real-time discovery, a full-text page-turning reader, and no CSS framework: just modular SCSS and design tokens.',
   f:['Curated feeds: trending in India and genre spotlights','In-app BookReader with page turns, two-page spread, zoom and read-aloud','3-way theme engine: Day, Warm Sepia (Kindle-style) and Night','Responsive 3D book art with spine lighting, crease shadows and hover lift','Debounced search with debounceTime and distinctUntilChanged'],
   e:'NgOptimizedImage, preconnect and priority hints to remove CLS and improve LCP.', tags:['Angular','Signals','Control flow','SCSS tokens','Open Library API'] },
